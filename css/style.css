@@ -18,19 +18,41 @@
 figcaption{
     text-align: center;
 }
-/* ********************SIDEBAR**************** */
+
+
+
+/* ******************** CALL TO ACTION **************** */
+
+.call-to-action{
+    height: 100px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.25);
+    padding: 0 20px;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#cta-button{
+    font-size: 1.2em;
+    text-decoration: none;
+    color: white;
+    padding: 15px 45px;
+    font-weight: bold;
+    border: 1px solid white;
+    border-radius: 25px;
+    position: relative;
+}
+
+/* ******************** SIDEBAR **************** */
 
 .sidebar{
     background-color: black;
     width: 250px;
     padding: 20px;
-}
-.call-to-action{
-    height: 100px;
-    width: calc(100% - 200px);
-    position: absolute;
-    left: 250px;
-    background-color: rgba(0, 0, 0, 0.25);
+    z-index: 100;
 }
 .sidebar-container{
     color: #818181;
