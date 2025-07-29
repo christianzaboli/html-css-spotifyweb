@@ -8,6 +8,79 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+
+.wrapper{
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+/* ********************SIDEBAR**************** */
+
+.sidebar{
+    background-color: black;
+    width: 250px;
+    padding: 20px;
+}
+.call-to-action{
+    height: 100px;
+    width: calc(100% - 65px - 200px);
+    position: absolute;
+    left: 250px;
+    background-color: rgba(255, 7, 7, 0.25);
+}
+.sidebar-container{
+    color: white;
+    height: 100%;
+    width: 100%;
+    background-color: red;  
+}
+.sidebar-container ul{
+    margin: 20px 0;
+}
+.sidebar-container > img{
+    width: 80%;
+}
+li{
+    margin: 10px 0;
+    gap: 5px;
+    display: flex;
+    list-style: none;
+    color: white;
+    font-size: 1.2em;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+li img{
+    width: 2.5em;
+}
+
+
+
+
+
+
+
+.main-section{
+    height: calc(100vh - 90px);
+    width: calc(100vw - 250px);
+    overflow-y: auto;
+    background-color: blue;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* *********************** MAIN PLAYER ******************** */
 
 .main-player{
