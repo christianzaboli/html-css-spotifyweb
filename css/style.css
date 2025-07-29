@@ -172,10 +172,11 @@ nav a{
 }
 .album-name{
     font-weight: bold;
-    font-size: 2em;
+    font-size: 1.6em;
 }
 .song-name{
-    font-size: 1.5em;
+    font-weight: bold;
+    font-size: 1.1em;
     color: #818181;
 }
 .song-cover{
@@ -314,10 +315,24 @@ nav a{
     margin: 0 0 0 20px;
 }
 
-
+/* *********************** MID 878PX ******************** */
 @media screen and (max-width:878px) {
-    
+    nav a{
+        line-height: 40px;
+    }
+    #song-box {
+        width: calc((100% / 4) - (100px / 6));
+    }
+    .album-name {
+        font-size: 1em;
+    }
+    .song-name {
+        font-size: .8em;
+    }
+
 }
+
+/* *********************** SMALL 639PX ******************** */
 @media screen and (max-width: 639px) {
     
     .current-song{
@@ -329,3 +344,4 @@ nav a{
     
 }
 
+/* *********************** XSMALL 552PX ******************** */
