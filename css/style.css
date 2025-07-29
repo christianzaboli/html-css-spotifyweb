@@ -5,6 +5,7 @@
 }
 :root{
     font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* *********************** MAIN PLAYER ******************** */
@@ -20,40 +21,115 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-shrink: 0;
 }
 .current-song{
     height: 80%;
-    width: calc(100% / 3);
+    width: 200px;
+    min-width: 120;
+    color: white;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
     /* DEBUG */
-    background-color: red;
+    /* background-color: red; */
+}
+#current-song-box{
+    height: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+#current-song-box figcaption{
+    margin-left: 15px;
+}
+.song-cover{
+    height: 80%;
+}
+.current-song-title{
+    font-size: 16px;
+    text-decoration: underline;
+}
+.current-song-name{
+    font-size: 12px;
+    color: #818181;
+}
+.current-song .fa-regular{
+    color: #818181;
+    margin: 2px 0 0 0;
+    font-size: 1.2em;
 }
 .commands{
     height: 80%;
-    width: calc(100% / 3);
-    flex-grow: 1;
     color: white;
+    margin: 0px 20px;
+    min-width: fit-content;
+    max-width: 450px;
+    display: flex;
+    flex-grow: 1;
+    flex-flow: column nowrap;
+    justify-content: center;
     /* DEBUG */
     /* background-color: rgb(0, 255, 42); */
 }
-.minor-commands{
-    height: 80%;    
-    width: calc(100% / 3);
-    /* DEBUG */    
-    background-color: red;
-}
 .commands-row-buttons{
+    font-size: 1.5em;
     display: flex;
     align-items: center;
+    justify-content: center;
+}
+.commands-row-buttons .fa-solid{
+    margin: 0 10px;
+}
+.fa-circle-play{
+    font-size: 2em;
 }
 .current-song-line{
+    font-size: 1em;
+    margin-top: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.progress-line{
-    background-color: #5A5A5A;
-    height: 10px;
+#progress-line{
+    background-color: #818181;
+    height: 8px;
     width: 100px;
+    margin: 0 20px;
+    border-radius: 5px;
     display: flex;
     flex-grow: 1;
 }
+.minor-commands{
+    color: white;
+    height: 80%;
+    width: 200px;
+    min-width: 120;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    /* DEBUG */    
+    /* background-color: red; */
+}
+.minor-commands #progress-line{
+    margin: 0 0 0 20px;
+}
+
+
+@media screen and (max-width:878px) {
+    
+}
+@media screen and (max-width: 639px) {
+    
+    .current-song{
+        flex-flow: column wrap;
+        justify-content: center;
+    }
+}
+@media screen and (max-width:552px) {
+    
+}
+
