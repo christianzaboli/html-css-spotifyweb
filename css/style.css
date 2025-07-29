@@ -15,7 +15,9 @@
     display: flex;
     flex-flow: row nowrap;
 }
-
+figcaption{
+    text-align: center;
+}
 /* ********************SIDEBAR**************** */
 
 .sidebar{
@@ -108,16 +110,65 @@ ol {
 
 
 
-
+/* ************************MAIN SECTION************* */
 .main-section{
     height: calc(100vh - 90px);
     width: calc(100vw - 250px);
     overflow-y: auto;
-    background-color: blue;
+    background-color: #141922;
     color: white;
 }
-
-
+.main-container{
+    padding: 0 20px
+}
+.main-container h1{
+    font-size: 25px;
+}
+nav{
+    margin: 120px 0 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #818181;
+}
+nav a{
+    text-decoration: none;
+    color: #818181;
+    font-weight: bold;
+    margin: 0 5px;
+}
+.main-row{
+    margin: 30px 0;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 20px;
+}
+#song-box{
+    width: calc((100% / 6) - (100px / 6));
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+.album-name{
+    font-weight: bold;
+    font-size: 2em;
+}
+.song-name{
+    font-size: 1.5em;
+    color: #818181;
+}
+.song-cover{
+    margin-bottom: 10px;
+    width: 100%;
+}
+#subtitle-main-row{
+    color: #818181;
+    font-size: 1.2em;
+    margin-top: 10px;
+    font-weight: bold;
+}
+.artist{
+    border-radius: 50%;
+}
 
 
 
@@ -164,9 +215,10 @@ ol {
     align-items: center;
 }
 #current-song-box figcaption{
+    text-align: left;
     margin-left: 15px;
 }
-.song-cover{
+.current-song-cover{
     height: 80%;
 }
 .current-song-title{
@@ -216,7 +268,7 @@ ol {
 }
 #progress-line{
     background-color: #818181;
-    height: 8px;
+    height: 5px;
     width: 100px;
     margin: 0 20px;
     border-radius: 5px;
