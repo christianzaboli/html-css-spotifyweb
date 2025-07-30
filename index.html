@@ -26,57 +26,62 @@
         <div class="wrapper">
 <!-- *********** CALL TO ACTION *********** -->            
             <div class="call-to-action">
-                <a href="#" id="cta-button">EFFETTUA L'UPGRADE</a>
+                <a href="#" id="cta-button"><span>EFFETTUA L'UPGRADE</span></a>
             </div>
 
 <!-- *********** SIDEBAR *********** -->
             <div class="sidebar">
                 <div class="sidebar-container">
                     <div class="sidebar-top-block">
-                        <a href="#">
+                        <a href="#"> <!-- LOGO PRINCIPALE-->
                             <img src="img/SVG/logo.svg" alt="spotify logo">
                         </a>
-                        <ul>
+
+                        <ul> <!-- SEZIONI PRINCIPALI SIDEBAR-->
                             <li>
+                                <div class="sidebar-selection"></div>
                                 <a href="#">
                                     <img src="img/SVG/home.svg" alt="home button">Home
                                 </a>
                             </li>
                             <li>
+                                <div class="sidebar-selection none"></div>
                                 <a href="#">
                                     <img src="img/SVG/search.svg" alt="search button">Cerca
                                 </a>
-                                
                             </li>
                             <li>
+                                <div class="sidebar-selection none"></div>
                                 <a href="#">
                                     <img src="img/SVG/libreria.svg" alt="library button">La tua libreria
                                 </a>
-                                
                             </li>
                         </ul>
+
                         <h2>PLAYLIST</h2>
-                        
-                        <div class="plus-playlist">
+                        <a id="plus-playlist">
                             <i class="fa-solid fa-square-plus"></i>Crea Playlist
-                        </div> 
-                        <ol>
-                            <li>Nome Playlist</li>
-                            <li>Nome Playlist</li>
-                            <li>Nome Playlist</li>
-                            <li>Nome Playlist</li>
-                            <li>Nome Playlist</li>
-                            <li>Nome Playlist</li>
-                            <li>Nome Playlist</li>
-                            <li>Nome Playlist</li>
-                            <li>Nome Playlist</li>
-    
-                        </ol>
+                        </a> 
+
                     </div>
                     <div class="sidebar-bottom-block">
-                        <span class="sidebar-download"><img src="img/SVG/download.svg" alt="download app button"> Installa app</span>
-                        <div class="divisore-sidebar"></div>
-                        <span class="sidebar-profile"><img src="img/SVG/profile.svg" alt="profile image"> Christian Zaboli Vedovi</span>
+                        <ol> <!-- LISTA PLAYLIST-->
+                            <li><a href="#">Nome Playlist</a></li>
+                            <li><a href="#">Nome Playlist</a></li>
+                            <li><a href="#">Nome Playlist</a></li>
+                            <li><a href="#">Nome Playlist</a></li>
+                            <li><a href="#">Nome Playlist</a></li>
+                            <li><a href="#">Nome Playlist</a></li>
+                            <li><a href="#">Nome Playlist</a></li>
+                            <li><a href="#">Nome Playlist</a></li>
+                            <li><a href="#">Nome Playlist</a></li>
+                        </ol>
+
+                        <div>
+                            <a class="sidebar-download"><img src="img/SVG/download.svg" alt="download app button"> Installa app</a>
+                            <div class="divisore-sidebar"></div>
+                            <span class="sidebar-profile"><img src="img/SVG/profile.svg" alt="profile image"> Christian Zaboli Vedovi</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -85,12 +90,32 @@
             <div class="main-section">
                 <div class="main-container">
                     <nav>
-                        <a href="#">IN EVIDENZA</a>
-                        <a href="#">PODCAST</a>
-                        <a href="#">CLASSIFICHE</a>
-                        <a href="#">GENERI E MOOD</a>
-                        <a href="#">NUOVE USCITE</a>
-                        <a href="#">SCOPRI</a>
+
+                        <div>
+                            <a href="#">IN EVIDENZA</a>
+                            <div class="nav-selection"></div>
+                        </div>
+                        <div>
+                            <a href="#">PODCAST</a>
+                            <div class="nav-selection none"></div>
+                        </div>
+                        <div>
+                            <a href="#">CLASSIFICHE</a>
+                            <div class="nav-selection none"></div>
+                        </div>
+                        <div>
+                            <a href="#">GENERI E MOOD</a>
+                            <div class="nav-selection none"></div>
+                        </div>
+                        <div>
+                            <a href="#">NUOVE USCITE</a>
+                            <div class="nav-selection none"></div>
+                        </div>
+                        <div>
+                            <a href="#">SCOPRI</a>
+                            <div class="nav-selection none"></div>
+                        </div>
+                        
                     </nav>
                     <h1>Recently played</h1>
                     <div class="main-row">

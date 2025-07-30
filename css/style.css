@@ -7,10 +7,9 @@
     font-size: 12px;
     font-family: "Open Sans", sans-serif;
 }
-::-webkit-scrollbar{
+::-webkit-scrollbar, .none{
     display: none;
 }
-
 .wrapper{
     display: flex;
     flex-flow: row nowrap;
@@ -63,6 +62,13 @@ figcaption{
     justify-content: space-between;
     /* background-color: red;   */
 }
+.sidebar-top-block{
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
 .sidebar-top-block ul{
     margin: 20px 0;
 }
@@ -73,49 +79,66 @@ figcaption{
     display: block;
     width: 80%;
 }
-.sidebar-top-block .fa-solid{
-    font-size: 3.5rem;
-    text-align: start;
-    width: auto;
-    margin: 0 10px 0 0;
-}
 li{
     margin: 10px 0;
-    gap: 5px;
     display: flex;
-    list-style: none;
     color: #818181;
-    font-size: 1.2em;
     flex-wrap: nowrap;
-    align-items: center;
 }
 li a{
     display: flex;
-    flex-flow: row;
     align-items: center;
     text-decoration: none;
     color: #818181;
-    width: 2.5em;
+    font-size: 13px;
 }
-.plus-playlist{
-    margin: 15px 0;
+.sidebar-top-block ul li a>img{
+    width: 34px;
+    margin: 0 10px 0 0;
+}
+.sidebar-selection{
+    height: 34px;
+    width: 2px;
+    background-color: #ADFF2F;
+    position: absolute;
+    left: 0;
+}
+#plus-playlist{
+    margin: 15px 5px 15px 0;
     font-size: 1.5em;
+    cursor: pointer;
     display: flex;
     align-items: center;
+    text-align: start;
+}
+#plus-playlist .fa-solid{
+    font-size: 3.5rem;
+    text-align: start;
 }
 ol {
     width: 100%;
-    height: 170px;
+    height: 100px;
     overflow-y: scroll;
+    flex-grow: 1;
 }
 .sidebar-bottom-block{
     width: 100%;
-    position: sticky;
-    background-color: black;
+    height: calc(100% - 325px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.sidebar-bottom-block > div{
+    padding: 10px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    flex-grow: 0;
 }
 .sidebar-download, .sidebar-profile{
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 .sidebar-download img, .sidebar-profile img{
     height: 20px;
@@ -149,21 +172,43 @@ ol {
 .main-container{
     padding: 0 20px
 }
-.main-container h1{
-    font-size: 25px;
-}
+
+
+/* ************************ NAV ************* */
 nav{
-    margin: 120px 0 20px;
-    text-align: center;
+    margin: 120px 0 0px;
     text-decoration: none;
     color: #818181;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
 }
 nav a{
     text-decoration: none;
     color: #818181;
     font-weight: bold;
     margin: 0 15px;
-    line-height: 40px;
+    /* line-height: 40px; */
+}
+.nav-selection{
+    /* position: relative;
+    top: -10px; */
+    width: 25px;
+    height: 2px;
+    background-color: #ADFF2F;
+}
+nav > div{
+    height: 50px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+/* ************************MAIN SECTION************* */
+
+.main-container h1{
+    font-size: 25px;
 }
 .main-row{
     margin: 30px 0;
@@ -182,11 +227,11 @@ nav a{
 }
 .album-name{
     font-weight: bold;
-    font-size: 1.6em;
+    /* font-size: 1.6em; */
 }
 .song-name{
     font-weight: bold;
-    font-size: 1.1em;
+    /* font-size: 1.1em; */
     color: #818181;
 }
 .song-cover{
@@ -323,6 +368,17 @@ nav a{
 }
 .minor-commands #progress-line{
     margin: 0 0 0 20px;
+}
+
+
+
+
+/* *********************** HOVERS ******************** */
+#cta-button:hover span{
+    font-size: 1.1em;
+}
+a:hover{
+    color: white;
 }
 
 /* *********************** MID 878PX ******************** */
