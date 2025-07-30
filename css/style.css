@@ -69,7 +69,8 @@ figcaption{
 .sidebar-top-block h2{
     color: white;
 }
-.sidebar-top-block > img{
+.sidebar-top-block > a{
+    display: block;
     width: 80%;
 }
 .sidebar-top-block .fa-solid{
@@ -88,7 +89,12 @@ li{
     flex-wrap: nowrap;
     align-items: center;
 }
-li img{
+li a{
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    text-decoration: none;
+    color: #818181;
     width: 2.5em;
 }
 .plus-playlist{
@@ -156,7 +162,8 @@ nav a{
     text-decoration: none;
     color: #818181;
     font-weight: bold;
-    margin: 0 5px;
+    margin: 0 15px;
+    line-height: 40px;
 }
 .main-row{
     margin: 30px 0;
@@ -165,10 +172,13 @@ nav a{
     gap: 20px;
 }
 #song-box{
+    height: 100%;
     width: calc((100% / 6) - (100px / 6));
     display: flex;
     flex-flow: column wrap;
     align-items: center;
+    color: white;
+    text-decoration: none;
 }
 .album-name{
     font-weight: bold;
@@ -316,10 +326,11 @@ nav a{
 }
 
 /* *********************** MID 878PX ******************** */
+
 @media screen and (max-width:878px) {
-    nav a{
+    /* nav a{
         line-height: 40px;
-    }
+    } */
     #song-box {
         width: calc((100% / 4) - (100px / 6));
     }
@@ -333,15 +344,21 @@ nav a{
 }
 
 /* *********************** SMALL 639PX ******************** */
+
 @media screen and (max-width: 639px) {
-    
+    #song-box {
+        width: calc((100% / 2) - (100px / 6));
+    }
+
     .current-song{
         flex-flow: column wrap;
         justify-content: center;
     }
 }
+
+
+/* *********************** XSMALL 552PX ******************** */
+
 @media screen and (max-width:552px) {
     
 }
-
-/* *********************** XSMALL 552PX ******************** */
