@@ -18,6 +18,7 @@ figcaption{
     text-align: center;
 }
 a{
+    color: white;
     cursor: pointer;
 }
 
@@ -49,6 +50,7 @@ a{
     border: 1px solid white;
     border-radius: 25px;
     position: relative;
+    z-index: 100;
 }
 
 /* ******************** SIDEBAR **************** */
@@ -115,6 +117,7 @@ li a{
     display: flex;
     align-items: center;
     text-align: start;
+    color: #818181;
 }
 #plus-playlist .fa-solid{
     font-size: 3.5rem;
@@ -143,6 +146,7 @@ ol {
 .sidebar-download, .sidebar-profile{
     display: flex;
     align-items: center;
+    color: #818181;
 }
 .sidebar-download img, .sidebar-profile img{
     height: 20px;
@@ -162,8 +166,46 @@ ol {
     color: white;
 }
 
-
-
+/* ****************** SIDEBAR RIDOTTA XS ******************* */
+        .sidebar-xs{
+            height: 100%;           
+            display: none;
+            flex-flow: column wrap;
+            justify-content: space-between;
+        }
+        .sidebar-xs-top{
+            text-align: center;
+            line-height: 30px;
+        }
+        .sidebar-xs-top a img{
+            width: 80%;
+        }
+        #logo-small img{
+            width: 100%;
+        }
+        .sidebar-xs-bottom{
+            height: 100px;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: flex-end;
+            text-align: center;
+            gap: 20px;
+        }
+        .sidebar-download-xs{
+            transform: scale(0.8);
+        }
+        .sidebar-download-xs img{
+            width: 35px;
+            padding-right: 5px;
+            
+        }
+        .sidebar-profile-xs img{
+            width: 40px;
+            height: 40px;
+            background-color: #818181;
+            border-radius: 20px;
+        }
+        
 
 /* ************************MAIN SECTION pt1************* */
 .main-section{
@@ -193,11 +235,9 @@ nav a{
     color: #818181;
     font-weight: bold;
     margin: 0 15px;
-    /* line-height: 40px; */
 }
 .nav-selection{
-    /* position: relative;
-    top: -10px; */
+
     width: 25px;
     height: 2px;
     background-color: #ADFF2F;
@@ -244,7 +284,7 @@ nav > div{
     width: 100%;
 }
 #play-hover{
-    font-size: 55px;
+    font-size: 300%;
     color: white;
     position: absolute;
     width: 100%;
@@ -295,7 +335,7 @@ nav > div{
 .current-song{
     height: 80%;
     width: 200px;
-    min-width: 120;
+    min-width: 100px;
     color: white;
     display: flex;
     flex-flow: row nowrap;
@@ -348,8 +388,9 @@ nav > div{
     align-items: center;
     justify-content: center;
 }
-.commands-row-buttons .fa-solid{
+.commands-row-buttons a{
     margin: 0 10px;
+    color: white;
 }
 .fa-circle-play{
     font-size: 2em;
@@ -374,7 +415,7 @@ nav > div{
     color: white;
     height: 80%;
     width: 200px;
-    min-width: 120;
+    min-width: 100px;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -400,7 +441,7 @@ nav > div{
     transform: scale(1.05);
 }
 
-a:hover, .current-song a .fa-regular:hover{
+a:hover, .current-song a .fa-regular:hover, #plus-playlist:hover{
     color: white;
 }
 
@@ -439,5 +480,32 @@ a:hover, .current-song a .fa-regular:hover{
 /* *********************** XSMALL 552PX ******************** */
 
 @media screen and (max-width:552px) {
-    
+    .main-section{
+        width: calc(100vw - 80px);
+    }
+    .sidebar{
+        width: 80px;
+    }
+    .sidebar-container{
+        display: none;
+    }
+    .sidebar-xs{
+        display: flex
+    }
+    .current-song-line{
+        width: 200px;
+    }
+    .commands{
+        align-items: center;
+    }
+    .minor-commands{
+        min-width: 100px;
+        gap: 3px;
+    }
+    .minor-commands #progress-line {
+    margin: 0 0 0 10px;
+    }
+    .current-song{
+    height: 70%;
+    }
 }
