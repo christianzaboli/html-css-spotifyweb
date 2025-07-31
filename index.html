@@ -10,9 +10,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
 <!-- *********** FONT AGGIUNTO *********** --> 
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <link rel="icon" href="img/favicon.ico">
     <title>Spotify Web</title>
@@ -24,6 +25,8 @@
     <main>
 
         <div class="wrapper">
+
+
 <!-- *********** CALL TO ACTION *********** -->            
             <div class="call-to-action">
                 <a href="#"><span id="cta-button">EFFETTUA L'UPGRADE</span></a>
@@ -37,7 +40,7 @@
                             <img src="img/SVG/logo.svg" alt="spotify logo">
                         </a>
 
-                        <ul> <!-- SEZIONI PRINCIPALI SIDEBAR-->
+                        <ul> <!-- SEZIONI PRINCIPALI SIDEBAR -->
                             <li>
                                 <div class="sidebar-selection"></div>
                                 <a href="#">
@@ -65,7 +68,7 @@
 
                     </div>
                     <div class="sidebar-bottom-block">
-                        <ol> <!-- LISTA PLAYLIST-->
+                        <ol> <!-- LISTA PLAYLIST -->
                             <li><a href="#">Nome Playlist</a></li>
                             <li><a href="#">Nome Playlist</a></li>
                             <li><a href="#">Nome Playlist</a></li>
@@ -77,7 +80,7 @@
                             <li><a href="#">Nome Playlist</a></li>
                         </ol>
 
-                        <div>
+                        <div> <!-- SIDEBAR PROFILO -->
                             <a class="sidebar-download"><img src="img/SVG/download.svg" alt="download app button"> Installa app</a>
                             <div class="divisore-sidebar"></div>
                             <span class="sidebar-profile"><img src="img/SVG/profile.svg" alt="profile image"> Christian Zaboli Vedovi</span>
@@ -89,7 +92,7 @@
 <!-- ****************** SIDEBAR RIDOTTA XS *******************  -->
                 <div class="sidebar-xs">
 
-                    <div class="sidebar-xs-top">
+                    <div class="sidebar-xs-top"><!-- SIDEBAR XS SOPRA-->
                         <a href="#" id="logo-small">
                             <img src="img/SVG/logo-small.svg" alt="home spotify logo small">
                         </a>
@@ -104,7 +107,7 @@
                         </a>
                     </div>
 
-                    <div class="sidebar-xs-bottom">
+                    <div class="sidebar-xs-bottom"> <!-- SIDEBAR XS SOTTO-->
                         <a class="sidebar-download-xs">
                             <img src="img/SVG/download.svg" alt="download app button">
                         </a>
@@ -148,7 +151,7 @@
                         
                     </nav>
 
-                    <h1>Recently played</h1>
+                    <h1>Recently played</h1> <!-- SUGGERIMENTI MAIN -->
                     <div class="main-row">
                         <a href="#" id="song-box">
                         <div>
@@ -242,7 +245,7 @@
 
                     </div>
 
-                    <h1>Creato per Christian Zaboli Vedovi</h1>
+                    <h1>Creato per Christian Zaboli Vedovi</h1> <!-- SUGGERIMENTI MAIN -->
                     <p id="subtitle-main-row">Pi&uacute; ascolti, pi&uacute; accurati saranno i tuoi suggeriti</p>
                     <div class="main-row">
 
@@ -273,7 +276,7 @@
                         </a>
                     </div>
 
-                    <h1>Artisti pi&uacute; popolari</h1>
+                    <h1>Artisti pi&uacute; popolari</h1> <!-- SUGGERIMENTI MAIN -->
                     <p id="subtitle-main-row">Pi&uacute; ascolti, pi&uacute; accurati saranno i tuoi suggeriti</p>
                     <div class="main-row">
 
@@ -306,7 +309,7 @@
 
 <!-- *********** MAIN PLAYER TAB *********** --> 
         <div class="main-player">
-            <div class="current-song">
+            <div class="current-song"> <!-- BRANO IN ASCOLTO -->
                 <div id="current-song-box">
                     <img src="img/sinister.jpeg" alt="sinister-cover" class="current-song-cover">
                     <figcaption>
@@ -319,29 +322,41 @@
                 <a href="#"><i class="fa-regular fa-folder"></i></a>
             </div>
             
-            <div class="commands">
-                <div class="commands-row-buttons">
+            <div class="commands"> <!-- COMANDI PRINCIPALI -->
+                <div class="commands-row-buttons"> <!-- COMANDI -->
                     <a href="#"><i class="fa-solid fa-shuffle"></i></a>
                     <a href="#"><i class="fa-solid fa-backward-step"></i></a>
-                    <a href="#"><i class="fa-solid fa-circle-play"></i></a>
+                    <a href="#" id="play-button"><i class="fa-solid fa-circle-play"></i></a>
                     <a href="#"><i class="fa-solid fa-forward-step"></i></a>
                     <a href="#"><i class="fa-solid fa-repeat"></i></a>
 
                 </div>
-                <div class="current-song-line">
+                <div class="current-song-line"> <!-- LINEA PLAY -->
                     <span>0:25</span>
                     <div id="progress-line">
-                        <div></div>
+                        <div id="shown-progress-line">
+                            <div id="line-white">
+                                <div id="circle"></div>
+                            </div>
+                            <div id="base-progress-line"></div>
+                        </div>
                     </div>
                     <span>4:35</span>
                 </div>
             </div>
 
-            <div class="minor-commands">
+            <div class="minor-commands"> <!-- COMANDI A DESTRA -->
                 <a href="#"><i class="fa-solid fa-list"></i></a>
                 <a href="#"><i class="fa-solid fa-desktop"></i></a>
                 <a href="#"><i class="fa-solid fa-volume-high"></i></a>
-                <div id="progress-line"></div>
+                    <div id="progress-line">
+                        <div id="shown-progress-line">
+                            <div id="line-white">
+                                <div id="circle"></div>
+                            </div>
+                            <div id="base-progress-line"></div>
+                        </div>
+                    </div>
             </div>
         </div>
 

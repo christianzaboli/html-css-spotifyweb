@@ -1,11 +1,12 @@
+/* ********* GENERALITÁ ********* */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 :root{
-    font-size: 12px;
-    font-family: "Open Sans", sans-serif;
+    font-size: 11px;
+    font-family: 'Montserrat', sans-serif;
 }
 ::-webkit-scrollbar, .none{
     display: none;
@@ -24,7 +25,6 @@ a{
 
 
 /* ******************** CALL TO ACTION **************** */
-
 .call-to-action{
     height: 100px;
     width: 100%;
@@ -48,13 +48,14 @@ a{
     padding: 15px 45px;
     font-weight: bold;
     border: 1px solid white;
+    background-color: rgba(0, 0, 0, 0.30);
     border-radius: 25px;
     position: relative;
     z-index: 100;
 }
 
-/* ******************** SIDEBAR **************** */
 
+/* ******************** SIDEBAR **************** */
 .sidebar{
     background-color: black;
     width: 250px;
@@ -163,8 +164,10 @@ ol {
     border-radius: 10px;
 }
 .sidebar-profile{
+    font-weight: bold;
     color: white;
 }
+
 
 /* ****************** SIDEBAR RIDOTTA XS ******************* */
         .sidebar-xs{
@@ -249,6 +252,7 @@ nav > div{
     align-items: center;
 }
 
+
 /* ************************MAIN SECTION pt2************* */
 
 .main-container h1{
@@ -308,16 +312,6 @@ nav > div{
 }
 
 
-
-
-
-
-
-
-
-
-
-
 /* *********************** MAIN PLAYER ******************** */
 .main-player{
     height: 90px;
@@ -349,19 +343,21 @@ nav > div{
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
+    margin: 0 3% 0 0;
 }
-#current-song-box figcaption{
+
+#current-song-box figcaption {
     text-align: left;
-    margin-left: 15px;
+    margin-left: 10px;
 }
 .current-song-cover{
     height: 80%;
 }
 .current-song-title{
-    font-size: 16px;
+    font-size: 15px;
 }
 .current-song-name{
-    font-size: 12px;
+    font-size: 11px;
     color: #818181;
 }
 .current-song .fa-regular{
@@ -372,7 +368,7 @@ nav > div{
 .commands{
     height: 80%;
     color: white;
-    margin: 0px 20px;
+    margin: 0px 5%;
     min-width: fit-content;
     max-width: 450px;
     display: flex;
@@ -403,14 +399,43 @@ nav > div{
     align-items: center;
 }
 #progress-line{
-    background-color: #818181;
-    height: 5px;
-    width: 100px;
-    margin: 0 20px;
-    border-radius: 5px;
     display: flex;
     flex-grow: 1;
 }
+#shown-progress-line{
+    height: 5px;
+    margin: 0 5%;
+    position: relative;
+    display: flex;
+    flex-grow: 1;
+    cursor: pointer;
+}
+#line-white{
+    background-color: white;
+    width: 35%;
+    height: 100%;
+    border-radius: 5px;
+    position: absolute;
+    left: 0;
+}
+#circle{
+    width: 1em;
+    height: 1em;
+    background-color: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    right: -3px;
+    top: -3px;
+    display: none;
+}
+#base-progress-line{
+    background-color: #818181;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+
 .minor-commands{
     color: white;
     height: 80%;
@@ -420,12 +445,9 @@ nav > div{
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
-    gap: 10px;
+    gap: 5%;
     /* DEBUG */    
     /* background-color: red; */
-}
-.minor-commands #progress-line{
-    margin: 0 0 0 20px;
 }
 
 
@@ -444,13 +466,23 @@ nav > div{
 a:hover, .current-song a .fa-regular:hover, #plus-playlist:hover{
     color: white;
 }
+#progress-line:hover #line-white{
+    background-color: #ADFF2F;
+}
+#progress-line:hover #circle{
+    display: block;
+}
+#play-button:hover {
+    transform: scale(1.1);
+
+}
+
+
 
 /* *********************** MID 878PX ******************** */
 
 @media screen and (max-width:878px) {
-    /* nav a{
-        line-height: 40px;
-    } */
+
     #song-box {
         width: calc((100% / 4) - (100px / 6));
     }
@@ -460,12 +492,13 @@ a:hover, .current-song a .fa-regular:hover, #plus-playlist:hover{
     .song-name {
         font-size: .8em;
     }
-
 }
+
 
 /* *********************** SMALL 639PX ******************** */
 
 @media screen and (max-width: 639px) {
+
     #song-box {
         width: calc((100% / 2) - (100px / 6));
     }
@@ -480,6 +513,7 @@ a:hover, .current-song a .fa-regular:hover, #plus-playlist:hover{
 /* *********************** XSMALL 552PX ******************** */
 
 @media screen and (max-width:552px) {
+
     .main-section{
         width: calc(100vw - 80px);
     }
@@ -497,15 +531,16 @@ a:hover, .current-song a .fa-regular:hover, #plus-playlist:hover{
     }
     .commands{
         align-items: center;
+        margin: 0px 2% 0 3%;
     }
     .minor-commands{
         min-width: 100px;
-        gap: 3px;
-    }
-    .minor-commands #progress-line {
-    margin: 0 0 0 10px;
     }
     .current-song{
-    height: 70%;
+        height: 60%;
+        
+    }
+    #current-song-box figcaption {
+        margin-left: 7px;
     }
 }
