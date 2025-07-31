@@ -15,7 +15,7 @@
     display: flex;
     flex-flow: row nowrap;
 }
-figcaption{
+.song-info{
     text-align: center;
 }
 a{
@@ -264,7 +264,7 @@ nav > div{
     flex-flow: row wrap;
     gap: 20px;
 }
-#song-box{
+.song-box{
     height: 100%;
     width: calc((100% / 6) - (100px / 6));
     display: flex;
@@ -287,21 +287,20 @@ nav > div{
 .song-cover-art{
     width: 100%;
 }
-#play-hover{
+.play-hover{
     font-size: 300%;
     color: white;
     position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
-    display: flex;
     background: rgba(0, 0, 0, 0.4);
     justify-content: center;
     flex-wrap: wrap;
     align-content: center;
     display: none;
 }
-#subtitle-main-row{
+.subtitle-main-row{
     color: #818181;
     font-size: 1.2em;
     margin-top: 10px;
@@ -346,7 +345,7 @@ nav > div{
     margin: 0 3% 0 0;
 }
 
-#current-song-box figcaption {
+#current-song-box .song-info {
     text-align: left;
     margin-left: 10px;
 }
@@ -398,11 +397,11 @@ nav > div{
     justify-content: space-between;
     align-items: center;
 }
-#progress-line{
+.progress-line{
     display: flex;
     flex-grow: 1;
 }
-#shown-progress-line{
+.shown-progress-line{
     height: 5px;
     margin: 0 5%;
     position: relative;
@@ -410,7 +409,7 @@ nav > div{
     flex-grow: 1;
     cursor: pointer;
 }
-#line-white{
+.line-white{
     background-color: white;
     width: 35%;
     height: 100%;
@@ -418,7 +417,7 @@ nav > div{
     position: absolute;
     left: 0;
 }
-#circle{
+.circle{
     width: 1em;
     height: 1em;
     background-color: #ffffff;
@@ -428,7 +427,7 @@ nav > div{
     top: -3px;
     display: none;
 }
-#base-progress-line{
+.base-progress-line{
     background-color: #818181;
     width: 100%;
     height: 100%;
@@ -455,7 +454,7 @@ nav > div{
 
 /* *********************** HOVERS ******************** */
 
-#song-box:hover #play-hover{
+.song-box:hover .play-hover{
     display: flex;
 }
 .call-to-action a:hover{
@@ -466,10 +465,10 @@ nav > div{
 a:hover, .current-song a .fa-regular:hover, #plus-playlist:hover{
     color: white;
 }
-#progress-line:hover #line-white{
+.progress-line:hover .line-white{
     background-color: #ADFF2F;
 }
-#progress-line:hover #circle{
+.progress-line:hover .circle{
     display: block;
 }
 #play-button:hover {
@@ -483,7 +482,7 @@ a:hover, .current-song a .fa-regular:hover, #plus-playlist:hover{
 
 @media screen and (max-width:878px) {
 
-    #song-box {
+    .song-box {
         width: calc((100% / 4) - (100px / 6));
     }
     .album-name {
@@ -499,7 +498,7 @@ a:hover, .current-song a .fa-regular:hover, #plus-playlist:hover{
 
 @media screen and (max-width: 639px) {
 
-    #song-box {
+    .song-box {
         width: calc((100% / 2) - (100px / 6));
     }
 
@@ -540,7 +539,7 @@ a:hover, .current-song a .fa-regular:hover, #plus-playlist:hover{
         height: 60%;
         
     }
-    #current-song-box figcaption {
+    #current-song-box .song-info {
         margin-left: 7px;
     }
 }
